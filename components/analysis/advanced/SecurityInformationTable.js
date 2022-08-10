@@ -5,7 +5,7 @@ import { BsCheckLg } from "react-icons/bs"
 import { booleanText } from '../../../services/myjs'
 
 function SecurityInformationTable({ tokenSecurityResults }) {
-    
+
     return tokenSecurityResults && (
         <div className="table-responsive">
             <table className="table align-items-center top-holders active">
@@ -401,6 +401,105 @@ function SecurityInformationTable({ tokenSecurityResults }) {
                                     <p className="text-xs font-weight-bold mb-0">Pass</p>
                                     <h6 className="text-sm mb-0">
                                         {tokenSecurityResults.is_anti_whale == 0 ?
+                                            <AiFillWarning color={"#EA4D00"} /> : <BsCheckLg color={"#82d616"} />
+                                        }
+                                    </h6>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+
+                    {tokenSecurityResults.trading_cooldown &&
+                        <tr>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Title</p>
+                                    <h6 className="text-sm mb-0">Trading Cooldown</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Description</p>
+                                    <h6 className="text-sm mb-0">Whether it can limit the minimum time between two transactions.</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Result</p>
+                                    <h6 className="text-sm mb-0">{booleanText(tokenSecurityResults.trading_cooldown)}</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Pass</p>
+                                    <h6 className="text-sm mb-0">
+                                        {tokenSecurityResults.trading_cooldown == 0 ?
+                                            <AiFillWarning color={"#EA4D00"} /> : <BsCheckLg color={"#82d616"} />
+                                        }
+                                    </h6>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+
+                    {tokenSecurityResults.selfdestruct &&
+                        <tr>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Title</p>
+                                    <h6 className="text-sm mb-0">Self-destruct</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Description</p>
+                                    <h6 className="text-sm mb-0">Whether it can self destruct causing all functions be unavailable, and all related assets be erased.</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Result</p>
+                                    <h6 className="text-sm mb-0">{booleanText(tokenSecurityResults.selfdestruct)}</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Pass</p>
+                                    <h6 className="text-sm mb-0">
+                                        {tokenSecurityResults.selfdestruct != 0 ?
+                                            <AiFillWarning color={"#EA4D00"} /> : <BsCheckLg color={"#82d616"} />
+                                        }
+                                    </h6>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+
+                    {tokenSecurityResults.external_call &&
+                        <tr>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Title</p>
+                                    <h6 className="text-sm mb-0">External Calls</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Description</p>
+                                    <h6 className="text-sm mb-0">Whether it has functions calling to other contracts making it highly dependent on them.</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Result</p>
+                                    <h6 className="text-sm mb-0">{booleanText(tokenSecurityResults.external_call)}</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="text-center">
+                                    <p className="text-xs font-weight-bold mb-0">Pass</p>
+                                    <h6 className="text-sm mb-0">
+                                        {tokenSecurityResults.external_call != 0 ?
                                             <AiFillWarning color={"#EA4D00"} /> : <BsCheckLg color={"#82d616"} />
                                         }
                                     </h6>
