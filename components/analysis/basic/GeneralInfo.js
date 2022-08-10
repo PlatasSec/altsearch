@@ -5,7 +5,7 @@ import useAppContext from '../../Context'
 import { GiMoneyStack } from "react-icons/gi"
 import { MdOutlineChangeCircle } from "react-icons/md"
 import { AiFillCaretDown, AiOutlineQuestionCircle, AiOutlineDollarCircle } from "react-icons/ai"
-import { BsFillInfoCircleFill, BsTelegram, BsDiscord, BsGlobe, BsTwitter, BsGithub, BsMedium, BsYoutube } from "react-icons/bs"
+import { BsFillInfoCircleFill } from "react-icons/bs"
 import { FcInfo } from "react-icons/fc"
 import { visualizeAnalysisSection, convertToFullDateMarketData, getTokenExplorerUrl } from '../../../services/myjs'
 import { addCommasToNumber } from '../../../services/myjs'
