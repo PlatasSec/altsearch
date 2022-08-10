@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import SarchNav from '../../../../components/analysis/SearchNav'
-import SarchNav from '../../../../components/analysis/basic/GeneralInfo'
+import GeneralInfo from '../../../../components/analysis/basic/GeneralInfo'
 
 export default function Index() {
 

@@ -1,4 +1,3 @@
-import react, { useEffect } from 'react';
 import '../styles/globals.css'
 import '../public/assets/css/nucleo-icons.css'
 import '../public/assets/css/nucleo-svg.css'
